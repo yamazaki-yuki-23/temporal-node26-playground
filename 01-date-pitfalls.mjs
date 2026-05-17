@@ -30,8 +30,10 @@ console.log("America/NY で表示:", d4.toLocaleString("en-US", { timeZone: "Ame
 
 section("5. 日付だけ・時刻だけを表現できない");
 const birthday = new Date("2000-04-12"); // 誕生日（時刻は不要）
-console.log("誕生日Date:", birthday.toString());
-// 時刻 00:00:00 と「UTC として解釈する」前提が勝手につく。
+console.log("誕生日Date           :", birthday.toString());
+console.log("Tokyo で表示         :", birthday.toLocaleDateString("ja-JP", { timeZone: "Asia/Tokyo" }));
+console.log("Los Angeles で表示   :", birthday.toLocaleDateString("en-US", { timeZone: "America/Los_Angeles" }));
+// 「2000-04-12 生まれ」のはずなのに、表示するタイムゾーンで日付が前日にずれる。
 
 section("6. 精度はミリ秒どまり");
 const now = Date.now();
