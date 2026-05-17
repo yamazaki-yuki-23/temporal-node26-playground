@@ -1,0 +1,20 @@
+{
+  "name": "temporal-node26-playground",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Node.js v26 で標準化された JavaScript Temporal を実際に触ってみるサンプルコード集",
+  "engines": {
+    "node": ">=26"
+  },
+  "scripts": {
+    "all": "for f in 0*.mjs; do echo \"=== $f ===\"; node \"$f\"; done",
+    "01": "node 01-date-pitfalls.mjs",
+    "02": "node 02-temporal-now.mjs",
+    "03": "node 03-temporal-instant.mjs",
+    "04": "node 04-temporal-plain.mjs",
+    "05": "node 05-temporal-zoned.mjs",
+    "06": "node 06-temporal-duration.mjs"
+  },
+  "license": "MIT"
+}
